@@ -17,16 +17,13 @@ package net.cqwu.classicalproblemalgorithm;
 public class FibonacciSequence {
     private static final long FIRST = 1L;
     private static final long SECOND = 2L;
-    public static void main(String[] args) {
-        System.out.println(noRecurve(8) +"--" + recurve(8));
-    }
 
     /**
      * 递归方式
      * @param num
      * @return
      */
-    public static long recurve(long num) {
+    public long recurve(long num) {
         if (num == FIRST || num == SECOND) {
             return 1;
         } else {
@@ -39,7 +36,7 @@ public class FibonacciSequence {
      * @param num
      * @return
      */
-    public static long noRecurve(long num) {
+    public long noRecurve(long num) {
         long f1 = 1L;
         long f2 = 1L;
         long f = 0L;
