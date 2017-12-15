@@ -1,4 +1,4 @@
-package net.cqwu.net.cqwu.trywithresources;
+package net.cqwu.trywithresources;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
