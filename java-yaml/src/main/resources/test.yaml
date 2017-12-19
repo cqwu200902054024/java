@@ -1,0 +1,13 @@
+yaml: >      # 注意 ":" 与 "|" 之间的空格
+   JSON的语法其实是YAML的子集，大部分的JSON文件都可以被YAML的解释器解释。
+   如果你想更深入的学习YAML，我建议你去 http://www.yaml.org 看看
+yaml0: |     # 注意 ":" 与 "|" 之间的空格
+   JSON的语法其实是YAML的子集，大部分的JSON文件都可以被YAML的解释器解释。
+   如果你想更深入的学习YAML，我建议你去 http://www.yaml.org 看看
+
+yaml1:      # 注意 ":" 与 "|" 之间的空格
+   "JSON的语法其实是YAML的子集，大部分的JSON文件都可以被YAML的解释器解释。
+   如果你想更深入的学习YAML，我建议你去 http://www.yaml.org 看看"
+yaml2: |-     # 注意 ":" 与 "|" 之间的空格
+   JSON的语法其实是YAML的子集，大部分的JSON文件都可以被YAML的解释器解释。
+   如果你想更深入的学习YAML，我建议你去 http://www.yaml.org 看看

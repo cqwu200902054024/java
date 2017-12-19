@@ -11,6 +11,7 @@
     <modules>
         <module>java-base</module>
         <module>java-8</module>
+        <module>java-yaml</module>
     </modules>
 
 

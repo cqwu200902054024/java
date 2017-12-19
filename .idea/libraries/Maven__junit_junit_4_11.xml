@@ -8,6 +8,10 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/" />
+      <root url="jar://D:/sources/asomov-snakeyaml-706b16c90374.zip!/asomov-snakeyaml-706b16c90374/src/main/java" />
+      <root url="jar://D:/sources/asomov-snakeyaml-706b16c90374.zip!/asomov-snakeyaml-706b16c90374/src/test/java" />
+      <root url="jar://D:/sources/asomov-snakeyaml-706b16c90374.zip!/asomov-snakeyaml-706b16c90374/src/test/java7" />
+      <root url="jar://D:/sources/asomov-snakeyaml-706b16c90374.zip!/asomov-snakeyaml-706b16c90374/src/test/java8" />
     </SOURCES>
   </library>
 </component>
