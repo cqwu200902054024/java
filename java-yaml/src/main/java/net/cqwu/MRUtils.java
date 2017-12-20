@@ -1,5 +1,6 @@
 package net.cqwu;
 
+import net.cqwu.bean.Person;
 import org.yaml.snakeyaml.Yaml;
 
 
@@ -28,7 +29,14 @@ public class MRUtils {
         //loadManyDocuments();
         //test();
        // System.out.println(getResourcePath("mr.yaml"));
-        for(Map.Entry<?,?> map : testLoadForMap("any-object-example.yaml").entrySet()) {
+   /*     for(Map.Entry<?,?> map : testLoadForMap("any-object-example.yaml").entrySet()) {
+            System.out.println(map.getKey() + ":" + map.getValue());
+        }*/
+   //通过名称传值
+        //String data1 = "--- !net.cqwu.bean.Person\nfirstName: Andrey\nage: 99 ";
+        //通=通过数组传值
+       // String data2 = "--- !net.cqwu.bean.Person [ Andrey, Somov, 99 ]";
+        for(Map.Entry<?,?> map : testLoadForMap("mr.yaml").entrySet()) {
             System.out.println(map.getKey() + ":" + map.getValue());
         }
     }
@@ -66,6 +74,15 @@ public class MRUtils {
      */
     public static List<?> testLoadForList(String fileName) {
         return newInstance().load(getResourceInputStream(fileName));
+    }
+
+    /**
+     * 将yaml转为bean
+     * @param <T>
+     * @return
+     */
+    public static <T> T testConvertToBean(Class<T> bean,String yamlStr) {
+        return newInstance().loadAs(yamlStr,bean);
     }
 
     /**
