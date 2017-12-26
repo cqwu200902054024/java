@@ -52,7 +52,9 @@ public class JavaIOTest {
        // byteTocharBuffer(src);
        // String data = "我们写一个检测文件长度的小程序，别看这个程序挺长";
       //  writeByChar(data,src);
-        randomReadAndWriteFile(src,dist);
+       // randomReadAndWriteFile(src,dist);
+        System.out.println(new String(readBytesByInputStreamNoLoop(src),"utf-8"));
+
     }
 
     /**
@@ -108,7 +110,7 @@ public class JavaIOTest {
     }
 
     public static byte[] readBytesByInputStream(File file) throws IOException{
-        byte[] bytes = new byte[11];
+        byte[] bytes = new byte[25];
         int i = 0;
         try(InputStream in = new FileInputStream(file)) {
             //Reads up to <code>b.length</code> bytes of data from this input
@@ -118,6 +120,21 @@ public class JavaIOTest {
                 i ++;
             }
             System.out.println(i + "读取次数");
+        }
+        return bytes;
+    }
+
+    public static byte[] readBytesByInputStreamNoLoop(File file) throws IOException{
+        byte[] bytes = new byte[25];
+        int i = 0;
+        try(InputStream in = new FileInputStream(file)) {
+            //Reads up to <code>b.length</code> bytes of data from this input
+            //stream into an array of bytes,读到结尾（没有数据可读），返回-1
+            //循环调用read()
+        /*    while(in.read(bytes) != -1) {
+                i ++;
+            }*/
+        in.read(bytes);
         }
         return bytes;
     }
