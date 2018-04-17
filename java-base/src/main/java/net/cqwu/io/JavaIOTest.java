@@ -255,5 +255,4 @@ public class JavaIOTest {
             System.out.println("写数据的结束位置：" + wf.getFilePointer());
         }
     }
-}
-
+}//

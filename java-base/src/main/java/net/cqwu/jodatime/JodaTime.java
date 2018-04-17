@@ -28,10 +28,11 @@ public class JodaTime {
         System.out.println(dt.plusDays(-1));
         Date d = dt.toDate();
         System.out.println(d);
-
+        //
         DateTime dt1 = new DateTime("2017-12-27");
         DateTime dt2 = new DateTime("2017-12-28");
         Duration duration = new Duration(dt1,dt2);
         System.out.println(duration.getStandardDays());
+        //130 + 663 = 793
     }
 }

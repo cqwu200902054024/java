@@ -90,7 +90,4 @@ public class DateUtil {
         sDate = date2.atTime(time).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         System.out.println(sDate);
     }
-
-
-
 }

@@ -1,6 +1,7 @@
 package net.cqwu.trywithresources;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -23,9 +24,14 @@ public class TryTest {
 
     }
 
-    public static String ReadFristLineFromFile(String path) throws IOException{
+    public static String readFristLineFromFile(String path){
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             return br.readLine();
+        } catch(FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 }
