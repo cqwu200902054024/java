@@ -8,18 +8,20 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java-8" />
         <module name="java-base" />
+        <module name="java-datastructure" />
         <module name="java-designpattern" />
         <module name="java-utils" />
         <module name="java-yaml" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="java" target="1.8" />
-      <module name="java-8" target="1.8" />
-      <module name="java-base" target="1.8" />
-      <module name="java-designpattern" target="1.8" />
-      <module name="java-utils" target="1.8" />
-      <module name="java-yaml" target="1.8" />
+      <module name="java" target="1.5" />
+      <module name="java-8" target="1.5" />
+      <module name="java-base" target="1.5" />
+      <module name="java-datastructure" target="1.5" />
+      <module name="java-designpattern" target="1.5" />
+      <module name="java-utils" target="1.5" />
+      <module name="java-yaml" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
