@@ -13,6 +13,7 @@
         <module>java-8</module>
         <module>java-yaml</module>
         <module>java-utils</module>
+        <module>java-designpattern</module>
     </modules>
 
 

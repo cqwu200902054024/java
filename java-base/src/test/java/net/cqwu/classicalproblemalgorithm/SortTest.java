@@ -1,8 +1,8 @@
 package net.cqwu.classicalproblemalgorithm;
 
-import net.cqwu.datastructure.BubbleSort;
-import net.cqwu.datastructure.InsertionSort;
-import net.cqwu.datastructure.SelectSort;
+import net.cqwu.datastructure.sorts.BubbleSort;
+import net.cqwu.datastructure.sorts.InsertionSort;
+import net.cqwu.datastructure.sorts.SelectSort;
 import org.junit.Test;
 
 /**

@@ -1,4 +1,4 @@
-package net.cqwu.datastructure;
+package net.cqwu.datastructure.sorts;
 
 /**
  * CopyRright (c)2018-0000:   net.cqwu
