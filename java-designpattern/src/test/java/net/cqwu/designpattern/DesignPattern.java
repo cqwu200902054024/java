@@ -1,5 +1,6 @@
 package net.cqwu.designpattern;
 
+import net.cqwu.adapter.*;
 import net.cqwu.factorymethod.abstractfactory.AbstractFactory;
 import net.cqwu.factorymethod.abstractfactory.FactoryProducer;
 import net.cqwu.factorymethod.abstractfactory.Shape;
@@ -87,5 +88,23 @@ public class DesignPattern {
         Resume resdeep = resume.deepClone0();
         workExperience.setWorkCompany("shcs");
         System.out.println(res.getName()+"-->" + res.getWorkExperience().getWorkCompany() + "--->" + resdeep.getWorkExperience().getWorkCompany());
+    }
+
+    @Test
+    public void testAdapter() {
+       Ps2 ps2 = new Adapter();
+       ps2.isPs2();
+    }
+
+    @Test
+    public void testAdapter1() {
+        Ps2 ps2 = new Adapter1(new Usber());
+        ps2.isPs2();
+    }
+
+    @Test
+    public void testMediaPlayer() {
+        MediaPlayer mediaPlayer = new AdapterPlayer("mp4");
+        mediaPlayer.play("mp4","test.file");
     }
 }
