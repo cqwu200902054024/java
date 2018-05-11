@@ -21,7 +21,7 @@
       <module name="java-datastructure" target="1.8" />
       <module name="java-designpattern" target="1.8" />
       <module name="java-utils" target="1.8" />
-      <module name="java-yaml" target="1.5" />
+      <module name="java-yaml" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

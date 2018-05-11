@@ -1,6 +1,10 @@
 package net.cqwu.designpattern;
 
 import net.cqwu.adapter.*;
+import net.cqwu.bridge.Image;
+import net.cqwu.bridge.JPGImage;
+import net.cqwu.bridge.WindowsImp;
+import net.cqwu.criteria.*;
 import net.cqwu.factorymethod.abstractfactory.AbstractFactory;
 import net.cqwu.factorymethod.abstractfactory.FactoryProducer;
 import net.cqwu.factorymethod.abstractfactory.Shape;
@@ -14,6 +18,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * CopyRright (c)2018-0000:   net.cqwu
@@ -106,5 +112,39 @@ public class DesignPattern {
     public void testMediaPlayer() {
         MediaPlayer mediaPlayer = new AdapterPlayer("mp4");
         mediaPlayer.play("mp4","test.file");
+    }
+
+    @Test
+    public void testBriage() {
+        Image image = new JPGImage();
+        image.set(new WindowsImp());
+        image.parseFile("test");
+    }
+
+    @Test
+    public void testCriteria() {
+        List<net.cqwu.criteria.Person> persons = new ArrayList<net.cqwu.criteria.Person>();
+        persons.add(new net.cqwu.criteria.Person("Robert",23,"Male", "Single"));
+        persons.add(new net.cqwu.criteria.Person("John", 32,"Male", "Married"));
+        persons.add(new net.cqwu.criteria.Person("Laura",34, "Female", "Married"));
+        persons.add(new net.cqwu.criteria.Person("Diana", 35,"Female", "Single"));
+        persons.add(new net.cqwu.criteria.Person("Mike", 67,"Male", "Single"));
+        persons.add(new net.cqwu.criteria.Person("Bobby",12, "Male", "Single"));
+
+        Criteria males = new CriteriaMale();
+        Criteria female = new CriteriaFemale();
+        Criteria single = new CriteriaSingle();
+        Criteria maleAndSingleCriteria = new AndCriteria(males,single);
+        Criteria orCriteria = new OrCriteria(female,single);
+        List<net.cqwu.criteria.Person> maleAndSingle = maleAndSingleCriteria.meetCriteria(persons);
+        for(net.cqwu.criteria.Person p : maleAndSingle) {
+            System.out.println(p);
+        }
+        System.out.println("=====================");
+        List<net.cqwu.criteria.Person> femaleOrSingle = orCriteria.meetCriteria(persons);
+        for(net.cqwu.criteria.Person p : femaleOrSingle) {
+            System.out.println(p);
+        }
+
     }
 }
