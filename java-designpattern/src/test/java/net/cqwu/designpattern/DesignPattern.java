@@ -4,7 +4,11 @@ import net.cqwu.adapter.*;
 import net.cqwu.bridge.Image;
 import net.cqwu.bridge.JPGImage;
 import net.cqwu.bridge.WindowsImp;
+import net.cqwu.composite.Component;
+import net.cqwu.composite.Composite;
+import net.cqwu.composite.Leaf;
 import net.cqwu.criteria.*;
+import net.cqwu.decorator.RedShapeDecorator;
 import net.cqwu.factorymethod.abstractfactory.AbstractFactory;
 import net.cqwu.factorymethod.abstractfactory.FactoryProducer;
 import net.cqwu.factorymethod.abstractfactory.Shape;
@@ -145,6 +149,26 @@ public class DesignPattern {
         for(net.cqwu.criteria.Person p : femaleOrSingle) {
             System.out.println(p);
         }
+    }
 
+    @Test
+    public void testComposite() {
+        Component leaf1 = new Leaf();
+        Component leaf2 = new Leaf();
+        Component leaf3 = new Leaf();
+        Component composite = new Composite();
+        Component composite2 = new Composite();
+        composite2.add(leaf3);
+        composite.add(composite2);
+        composite.add(leaf1);
+        composite.add(leaf2);
+        composite.operation();
+    }
+
+    @Test
+    public void testDecorator() {
+          net.cqwu.decorator.Shape shapeCircle = new net.cqwu.decorator.Circle();
+          net.cqwu.decorator.ShapeDecorator shapeDecorator = new RedShapeDecorator(shapeCircle);
+          shapeDecorator.draw();
     }
 }
