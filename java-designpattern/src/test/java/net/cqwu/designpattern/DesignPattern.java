@@ -9,6 +9,7 @@ import net.cqwu.composite.Composite;
 import net.cqwu.composite.Leaf;
 import net.cqwu.criteria.*;
 import net.cqwu.decorator.RedShapeDecorator;
+import net.cqwu.facade.Facade;
 import net.cqwu.factorymethod.abstractfactory.AbstractFactory;
 import net.cqwu.factorymethod.abstractfactory.FactoryProducer;
 import net.cqwu.factorymethod.abstractfactory.Shape;
@@ -170,5 +171,12 @@ public class DesignPattern {
           net.cqwu.decorator.Shape shapeCircle = new net.cqwu.decorator.Circle();
           net.cqwu.decorator.ShapeDecorator shapeDecorator = new RedShapeDecorator(shapeCircle);
           shapeDecorator.draw();
+    }
+
+    @Test
+    public void testFacade() {
+        Facade facade = new Facade();
+        facade.methodA();
+        facade.op();
     }
 }
