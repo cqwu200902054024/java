@@ -151,7 +151,7 @@ public class DesignPattern {
             System.out.println(p);
         }
     }
-
+//////////////////////////////////
     @Test
     public void testComposite() {
         Component leaf1 = new Leaf();
@@ -178,5 +178,11 @@ public class DesignPattern {
         Facade facade = new Facade();
         facade.methodA();
         facade.op();
+    }
+
+    @Test
+    public void testFlyweight() {
+        net.cqwu.flyweight.Shape circle = net.cqwu.flyweight.ShapeFactory.getShape("red");
+        circle.draw();
     }
 }
