@@ -32,4 +32,12 @@ public class BaseTest {
             System.out.println(array[i]);
         }*/
     }
+
+    @Test
+    public void testClassLoad() {
+        System.out.println(System.getProperty("java.ext.dirs"));
+        System.out.println(BaseTest.class.getResource(""));
+        System.out.println(BaseTest.class.getResourceAsStream(""));
+        System.out.println(BaseTest.class.getClassLoader().getResource(""));
+    }
 }

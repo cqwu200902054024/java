@@ -1,8 +1,5 @@
 package net.cqwu.classicalproblemalgorithm;
 
-import net.cqwu.datastructure.sorts.BubbleSort;
-import net.cqwu.datastructure.sorts.InsertionSort;
-import net.cqwu.datastructure.sorts.SelectSort;
 import org.junit.Test;
 
 /**
@@ -23,29 +20,14 @@ import org.junit.Test;
 public class SortTest {
     @Test
     public void testBubbleSort() {
-        Integer[] values = new Integer[]{12,34,11,33,23};
-        BubbleSort.sort0(values);
-        for(Integer value : values) {
-            System.out.println(value);
-        }
     }
 
     @Test
     public void testSelectSort() {
-        Integer[] values = new Integer[]{12,34,11,33,23};
-        SelectSort.sort0(values);
-        for(Integer value : values) {
-            System.out.println(value);
-        }
     }
 
     @Test
     public void testInsertionSort() {
-        Integer[] values = new Integer[]{12,34,11,33,23};
-        InsertionSort.sort(values);
-        for(Integer value : values) {
-            System.out.println(value);
-        }
     }
 
 }
