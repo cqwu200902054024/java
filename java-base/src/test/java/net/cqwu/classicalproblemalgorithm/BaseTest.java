@@ -20,6 +20,7 @@ import java.util.Arrays;
  * Version:        V1.0
  */
 public class BaseTest {
+
     @Test
     public void testNum() {
        System.out.println(4 << 1);
@@ -39,5 +40,11 @@ public class BaseTest {
         System.out.println(BaseTest.class.getResource(""));
         System.out.println(BaseTest.class.getResourceAsStream(""));
         System.out.println(BaseTest.class.getClassLoader().getResource(""));
+    }
+
+    @Test
+    public void test02() {
+      //  String
+      System.out.println(new Object().toString().length());
     }
 }

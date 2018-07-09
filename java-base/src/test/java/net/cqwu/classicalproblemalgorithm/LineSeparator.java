@@ -39,5 +39,5 @@ public class LineSeparator {
         int ress = (712121212 & Integer.MAX_VALUE) % 232323;
         System.out.println(System.nanoTime() - s);
         System.out.println();
-    }
+    }////
 }
