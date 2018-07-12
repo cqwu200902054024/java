@@ -1,5 +1,8 @@
 package net.cqwu.classicalproblemalgorithm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * CopyRright (c)2018-0000:   net.cqwu
  * Project:               java
@@ -21,8 +24,11 @@ public class Offer100 {
         System.out.println(test[0].length);
         //二分查找
         int[] array = {1,2,3,4,5,6,6,7,9};
+        //Collection
         int res = recursionBinarySearch(array,7,0,array.length - 1);
         System.out.println(res);
+        List<Integer> ll  = new ArrayList<>();
+        ll.remove(0);
     }
 
 
@@ -40,5 +46,4 @@ public class Offer100 {
               return middle;
           }
     }
-
 }

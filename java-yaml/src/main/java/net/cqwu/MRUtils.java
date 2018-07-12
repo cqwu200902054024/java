@@ -1,6 +1,5 @@
 package net.cqwu;
 
-import net.cqwu.bean.Person;
 import org.yaml.snakeyaml.Yaml;
 
 
@@ -110,6 +109,4 @@ public class MRUtils {
     private static Yaml newInstance() {
         return  new Yaml();
     }
-
-
  }

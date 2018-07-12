@@ -1,5 +1,6 @@
 package net.cqwu.collections;
 
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -21,8 +22,6 @@ import java.util.List;
  */
 public class ListStu {
     public static void main(String ... args) {
-       List<String> list = new ArrayList<>();
-       List<String> linkList = new LinkedList<>();
-
+        System.out.println("\\n");
     }
 }
